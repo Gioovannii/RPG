@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+final class Colossus: Character {
+    init(name: String) {
+        super.init(name: name, type: .Colossus, lifePoints: 150, maxLife: 170, weapon: SpikedShield())
+    }
+}

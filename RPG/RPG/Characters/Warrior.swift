@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+final class Warrior: Character {
+    
+    // Each character should be named
+    init(name: String) {
+        // use the init of the  mother class (Characters with all is propriety)
+        super.init(name: name, type: .Warrior, lifePoints: 100, maxLife: 120, weapon: Sword())
+    }
+}
