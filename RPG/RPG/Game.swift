@@ -1,9 +1,9 @@
 //
 //  File.swift
-//  RPG
+//  Fighting Game
 //
-//  Created by Jonathan Gaffé on 2019/10/14.
-//  Copyright © 2019 Giovanni Gaffé. All rights reserved.
+//  Created by GAFFE on 25/07/2019.
+//  Copyright © 2019 GAFFE GIOVANNI. All rights reserved.
 //
 
 import Foundation
@@ -69,4 +69,84 @@ final class Game {
         }
     }
     
+    /// fight continue until there is a loser
+    private func fight() {
+        while true {
+            // for loop to take a player at index 0 and paly his turn
+            for i in 0..<2 {
+                print("")
+                print(players[i].name + " choose your character")
+                players[i].descriptionCharacters()
+                print("")
+                let chosenCharacter = players[i].characters[userChoice() - 1]
+                print("")
+                misteryBox(chosenCharacter)
+                if let magus = chosenCharacter as? Magus {
+                    print("choose a character to heal")
+                    players[i].descriptionCharacters()
+                    magus.heal(players[i].characters[userChoice() - 1])
+                    // index is at 0 so we ca
+                } else {
+                    if i == 0 {
+                        let target = players[i + 1]
+                        print("")
+                        fightDetails(target: target, character: chosenCharacter, index: i)
+                        if players[i + 1].isLoser {
+                            return
+                        }
+                    } else {
+                        let target = players[i - 1]
+                        fightDetails(target: target, character: chosenCharacter, index: i)
+                        if players[i - 1].isLoser {
+                            return
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    /// Action every time player need to choice a character of each team
+    private func fightDetails(target: Player, character: Character, index : Int) {
+        target.descriptionCharacters() //Desciprion of ennemy
+        print("choose a character to attack !")
+        let myTarget = target.characters[userChoice() - 1]
+        // create of optional to remove one character in the userChoice
+        character.attack(myTarget) // attack
+    }
+    
+    /// function to ask choice to user every time needed
+    private func userChoice() -> Int {
+        var userChoice = 0
+        repeat {
+            if let data = readLine() {
+                if let integer = Int(data) {
+                    userChoice = integer
+                }
+            }
+        } while userChoice != 1 && userChoice != 2 && userChoice != 3
+        return userChoice
+    }
+    
+    /// function contain a bonus
+    private func misteryBox(_ character: Character) {
+        let randomNumber = Int.random(in: 1...99)
+        if character.lifePoints >= 1, randomNumber <= 40 {
+            print("The magic chest just appear ")
+            if character is Magus {
+                print("Congratulation ! You found the AngelStick with 70 of healing let's use this right now ")
+                print("")
+                let newWeapon = AngelStick()
+                character.weapon = newWeapon
+            } else {
+                print("Congratulation! You found the Cross Bow with 70 of dammage so powerfull ")
+                print("")
+                let newWeapon = CrossBow()
+                character.weapon = newWeapon
+            }
+        }
+    }
 }
+
+
+

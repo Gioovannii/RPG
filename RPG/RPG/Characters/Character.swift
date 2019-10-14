@@ -1,9 +1,9 @@
 //
-//  Characters.swift
-//  RPG
+//  File.swift
+//  Fighting Game
 //
-//  Created by Jonathan Gaffé on 2019/10/14.
-//  Copyright © 2019 Giovanni Gaffé. All rights reserved.
+//  Created by GAFFE on 07/06/2019.
+//  Copyright © 2019 GAFFE GIOVANNI. All rights reserved.
 //
 
 import Foundation
@@ -62,31 +62,33 @@ class Character {
         self.maxLife = maxLife
         self.weapon  = weapon
     }
+    
+    /// Description of characters lifes
+    func description(index: Int) -> String {
+        if isDead {
+            return("Your \(name) the \(type) is unable to be chosen, he had die during the fight. ☠️")
+        } else {
+            return("\(index). \(name) the \(type) \(lifePoints)/\(maxLife) life points /  \(weapon.weaponName) : \(weapon.damage) dammage ")
+        }
+    }
+    
+    /// Deduction of target's life points
+    func attack(_ target: Character) {
+        // Deduct weapon's damage to the target's life points
+        let newLifePoint = target.lifePoints - self.weapon.damage
+        
+        if lifePoints > 0 { // Check of character's life before checking isDead
+            if target.isDead {
+                print("You can't attack dead people")
+            } else {
+                target.lifePoints = newLifePoint
+                if target.lifePoints < 0  {
+                    target.lifePoints = 0
+                }
+            }
+        } else {
+            print("You're character is already dead my friend ")
+        }
+    }
 }
-/// Description of characters lifes
-   func description(index: Int) -> String {
-       if isDead {
-           return("Your \(name) the \(type) is unable to be chosen, he had die during the fight. ☠️")
-       } else {
-           return("\(index). \(name) the \(type) \(lifePoints)/\(maxLife) life points /  \(weapon.weaponName) : \(weapon.damage) dammage ")
-       }
-   }
-   
-   /// Deduction of target's life points
-   func attack(_ target: Character) {
-       // Deduct weapon's damage to the target's life points
-       let newLifePoint = target.lifePoints - self.weapon.damage
-       
-       if lifePoints > 0 { // Check of character's life before checking isDead
-           if target.isDead {
-               print("You can't attack dead people")
-           } else {
-               target.lifePoints = newLifePoint
-               if target.lifePoints < 0  {
-                   target.lifePoints = 0
-               }
-           }
-       } else {
-           print("You're character is already dead my friend ")
-       }
-   }
+

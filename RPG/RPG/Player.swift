@@ -1,12 +1,13 @@
 //
 //  File.swift
-//  RPG
+//  Fighting Game
 //
-//  Created by Jonathan Gaffé on 2019/10/14.
-//  Copyright © 2019 Giovanni Gaffé. All rights reserved.
+//  Created by GAFFE on 07/06/2019.
+//  Copyright © 2019 GAFFE GIOVANNI. All rights reserved.
 //
 
 import Foundation
+
 /// Define each of our player
 final class Player {
     
@@ -39,3 +40,4 @@ final class Player {
         }
     }
 }
+
