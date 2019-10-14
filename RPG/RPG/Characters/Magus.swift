@@ -23,3 +23,28 @@ override func description(index: Int) -> String {
         return "\(index). \(name) \(type) with \(lifePoints)/\(maxLife) life points, is healing with a \(weapon.weaponName) by \(weapon.healing)"
     }
 }
+/// Lock the attack to print message
+    override func attack(_ target: Character) {
+        print("Sorry I can't attack")
+    }
+    
+    /// Heal a character
+    internal func heal(_ target: Character) {
+        // Over heal not accepted
+        // As long the target have the same amount of life than you want to heal
+        // We only print Life is full
+        guard target.lifePoints != target.maxLife else {
+            print("You're fighter is already full of life")
+            return
+        }
+        // New variable to calculate new life points
+        var newLifePoints = target.lifePoints + self.weapon.healing
+        
+        // Not over heal
+        if newLifePoints >= target.maxLife {
+            newLifePoints = target.maxLife
+        }
+        // Guard statement didn't block so we can add some life
+        target.lifePoints = newLifePoints
+    }
+}
