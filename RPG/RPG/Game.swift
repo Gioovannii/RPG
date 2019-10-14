@@ -1,9 +1,9 @@
 //
-//  File.swift
-//  Fighting Game
+//  Game.swift
+//  RPG
 //
-//  Created by GAFFE on 25/07/2019.
-//  Copyright © 2019 GAFFE GIOVANNI. All rights reserved.
+//  Created by Jonathan Gaffé on 2019/10/14.
+//  Copyright © 2019 Giovanni Gaffé. All rights reserved.
 //
 
 import Foundation
