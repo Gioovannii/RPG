@@ -1,9 +1,9 @@
 # RPG
 
 
-Ability evaluated 
-・Build a Swift Program 
-・ Understand and use Object-Oriented Programming
+# Ability evaluated 
+- Build a Swift Program 
+- Understand and use Object-Oriented Programming
 
 
 Fight Game between 2 players
@@ -17,5 +17,6 @@ We can have 3 choice of characters
  Organize your team efficiently, you can have the same character any time you want but with a different name.
  
  You may see something appear ... So stay focus and enjoy the game 
+
 
 
