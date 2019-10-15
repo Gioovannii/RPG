@@ -8,6 +8,6 @@
 
 import Foundation
 
-
+// Launch of instance
 let start = Game()
 start.principalMenu()
