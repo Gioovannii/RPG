@@ -9,6 +9,18 @@
 /* Begin PBXBuildFile section */
 		7B57638A235480FC00F7DE57 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B576389235480FC00F7DE57 /* main.swift */; };
 		7B5763912354813200F7DE57 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5763902354813200F7DE57 /* Game.swift */; };
+		7B576393235482D900F7DE57 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B576392235482D900F7DE57 /* Player.swift */; };
+		7B57639623548DCA00F7DE57 /* Warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B57639523548DCA00F7DE57 /* Warrior.swift */; };
+		7B57639823548DE000F7DE57 /* Magus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B57639723548DE000F7DE57 /* Magus.swift */; };
+		7B57639A23548DEC00F7DE57 /* Colossus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B57639923548DEC00F7DE57 /* Colossus.swift */; };
+		7B57639C23548E0700F7DE57 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B57639B23548E0700F7DE57 /* Character.swift */; };
+		7B57639E2354907000F7DE57 /* PlayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B57639D2354907000F7DE57 /* PlayerFactory.swift */; };
+		7B5763AE235497F200F7DE57 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5763AD235497F200F7DE57 /* Weapon.swift */; };
+		7B5763B02354980000F7DE57 /* Sword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5763AF2354980000F7DE57 /* Sword.swift */; };
+		7B5763B22354981700F7DE57 /* MagusStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5763B12354981700F7DE57 /* MagusStick.swift */; };
+		7B5763B42354983000F7DE57 /* AngelStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5763B32354983000F7DE57 /* AngelStick.swift */; };
+		7B5763B62354984900F7DE57 /* CrossBow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5763B52354984900F7DE57 /* CrossBow.swift */; };
+		7B5763B82354985F00F7DE57 /* SpikedShield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5763B72354985F00F7DE57 /* SpikedShield.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +39,18 @@
 		7B576386235480FC00F7DE57 /* RPG */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RPG; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B576389235480FC00F7DE57 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7B5763902354813200F7DE57 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		7B576392235482D900F7DE57 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		7B57639523548DCA00F7DE57 /* Warrior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warrior.swift; sourceTree = "<group>"; };
+		7B57639723548DE000F7DE57 /* Magus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magus.swift; sourceTree = "<group>"; };
+		7B57639923548DEC00F7DE57 /* Colossus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colossus.swift; sourceTree = "<group>"; };
+		7B57639B23548E0700F7DE57 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		7B57639D2354907000F7DE57 /* PlayerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerFactory.swift; sourceTree = "<group>"; };
+		7B5763AD235497F200F7DE57 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		7B5763AF2354980000F7DE57 /* Sword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sword.swift; sourceTree = "<group>"; };
+		7B5763B12354981700F7DE57 /* MagusStick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagusStick.swift; sourceTree = "<group>"; };
+		7B5763B32354983000F7DE57 /* AngelStick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngelStick.swift; sourceTree = "<group>"; };
+		7B5763B52354984900F7DE57 /* CrossBow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossBow.swift; sourceTree = "<group>"; };
+		7B5763B72354985F00F7DE57 /* SpikedShield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpikedShield.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +85,36 @@
 			children = (
 				7B576389235480FC00F7DE57 /* main.swift */,
 				7B5763902354813200F7DE57 /* Game.swift */,
+				7B576392235482D900F7DE57 /* Player.swift */,
+				7B57639D2354907000F7DE57 /* PlayerFactory.swift */,
+				7B5763AC2354978B00F7DE57 /* Weapons */,
+				7B57639423548D6B00F7DE57 /* Characters */,
 			);
 			path = RPG;
+			sourceTree = "<group>";
+		};
+		7B57639423548D6B00F7DE57 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				7B57639B23548E0700F7DE57 /* Character.swift */,
+				7B57639523548DCA00F7DE57 /* Warrior.swift */,
+				7B57639723548DE000F7DE57 /* Magus.swift */,
+				7B57639923548DEC00F7DE57 /* Colossus.swift */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		7B5763AC2354978B00F7DE57 /* Weapons */ = {
+			isa = PBXGroup;
+			children = (
+				7B5763AD235497F200F7DE57 /* Weapon.swift */,
+				7B5763AF2354980000F7DE57 /* Sword.swift */,
+				7B5763B52354984900F7DE57 /* CrossBow.swift */,
+				7B5763B12354981700F7DE57 /* MagusStick.swift */,
+				7B5763B32354983000F7DE57 /* AngelStick.swift */,
+				7B5763B72354985F00F7DE57 /* SpikedShield.swift */,
+			);
+			path = Weapons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +176,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B57638A235480FC00F7DE57 /* main.swift in Sources */,
+				7B5763B22354981700F7DE57 /* MagusStick.swift in Sources */,
+				7B57639C23548E0700F7DE57 /* Character.swift in Sources */,
+				7B576393235482D900F7DE57 /* Player.swift in Sources */,
+				7B5763B62354984900F7DE57 /* CrossBow.swift in Sources */,
+				7B5763B42354983000F7DE57 /* AngelStick.swift in Sources */,
+				7B5763B82354985F00F7DE57 /* SpikedShield.swift in Sources */,
+				7B57639E2354907000F7DE57 /* PlayerFactory.swift in Sources */,
+				7B57639823548DE000F7DE57 /* Magus.swift in Sources */,
+				7B5763B02354980000F7DE57 /* Sword.swift in Sources */,
+				7B57639623548DCA00F7DE57 /* Warrior.swift in Sources */,
+				7B57639A23548DEC00F7DE57 /* Colossus.swift in Sources */,
 				7B5763912354813200F7DE57 /* Game.swift in Sources */,
+				7B5763AE235497F200F7DE57 /* Weapon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
