@@ -17,6 +17,8 @@ final class Game {
     private let playerFactory = PlayerFactory()
     // declare of array Player to append players
     private var players = [Player]()
+    // Keep in memory all turns
+    private var numberOfTurns = 1
     
     // MARK: - Methods
     
@@ -59,6 +61,7 @@ final class Game {
                 // adjust for the players to the players in playerFactory class
                 players = playerFactory.players
                 fight()
+                endGame()
             case "2":
                 print("You quit")
             default: // if not
@@ -72,7 +75,7 @@ final class Game {
     /// fight continue until there is a loser
     private func fight() {
         while true {
-            // for loop to take a player at index 0 and paly his turn
+            // for loop to take a player at index 0 and play his turn
             for i in 0..<2 {
                 print("")
                 print(players[i].name + " choose your character")
@@ -103,6 +106,7 @@ final class Game {
                     }
                 }
             }
+            numberOfTurns += 1
         }
     }
     
@@ -145,6 +149,20 @@ final class Game {
                 character.weapon = newWeapon
             }
         }
+    }
+    
+    private func endGame() {
+        for player in players {
+            print("player : " + player.name)
+            player.descriptionCharacters()
+            print("")
+        }
+        for player in players {
+            if player.isLoser {
+                print("\(player.name) lose ")
+            }
+        }
+        print("with a total of \(numberOfTurns) turns ")
     }
 }
 

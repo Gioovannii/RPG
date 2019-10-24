@@ -23,6 +23,8 @@ final class Player {
                 isLoser = true
             } else { return false }
         }
+        print("")
+        print("")
         return isLoser
     }
     

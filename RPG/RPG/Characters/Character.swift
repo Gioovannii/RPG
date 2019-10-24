@@ -66,7 +66,7 @@ class Character {
     /// Description of characters lifes
     func description(index: Int) -> String {
         if isDead {
-            return("Your \(name) the \(type) is unable to be chosen, he had die during the fight. ☠️")
+            return("☠️ \(name) the \(type) \(lifePoints)/\(maxLife) had die during the fight. ☠️")
         } else {
             return("\(index). \(name) the \(type) \(lifePoints)/\(maxLife) life points /  \(weapon.weaponName) : \(weapon.damage) dammage ")
         }

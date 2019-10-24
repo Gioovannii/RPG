@@ -18,7 +18,7 @@ final class PlayerFactory {
     private let maxCharacters = 3
     private var characterNames = [String]()
     private var playerNames = [String]()
-
+    
     /// Method createPlayers using createPlayer
     func createPlayers() {
         for i in 0..<maxPlayers {
@@ -58,6 +58,7 @@ final class PlayerFactory {
         2. Magus => 60 Life / Stick: 30 (heal)
         3. Colossus => 150 Life / Spiked Shield: 3 (dammage)
         """)
+        print("")
         repeat {
             if let data = readLine() {
                 if let dataToInt = Int(data) {
@@ -100,6 +101,7 @@ final class PlayerFactory {
     /// Method block if playerName allready in use
     private func uniquePlayerName() -> String {
         print("Enter player name : ")
+        print("")
         var playerName = ""
         repeat {
             if let data = readLine() {

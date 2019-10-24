@@ -8,7 +8,7 @@
 
 import Foundation
 
- class Weapon {
+class Weapon {
     let damage: Int
     let weaponName: String
     let healing: Int
