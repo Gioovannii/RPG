@@ -11,7 +11,7 @@ import Foundation
 // Class for create our teams
 final class PlayerFactory {
     
-    // MARK: - Proprieties
+    // MARK: - Properties
     
     var players = [Player]()
     private let maxPlayers = 2
@@ -19,7 +19,7 @@ final class PlayerFactory {
     private var characterNames = [String]()
     private var playerNames = [String]()
     
-    /// Method createPlayers using createPlayer
+    /// CreatePlayers using createPlayer
     func createPlayers() {
         for i in 0..<maxPlayers {
             print("creation of player nº\(i + 1)")
@@ -66,7 +66,7 @@ final class PlayerFactory {
                 }
             }
         } while userChoice != 1 && userChoice != 2 && userChoice != 3
-        // Switch to create an object of type Character
+        // Create an object of type Character
         switch userChoice {
         case 1:
             return Warrior(name: uniqueCharacterName())
@@ -80,7 +80,7 @@ final class PlayerFactory {
         }
     }
     
-    /// Method block if characterName allready in use
+    /// Block if characterName allready in use
     private func uniqueCharacterName() -> String {
         print("Enter character name : ")
         var characterName = ""
@@ -98,7 +98,7 @@ final class PlayerFactory {
         return characterName
     }
     
-    /// Method block if playerName allready in use
+    /// Block if playerName allready in use
     private func uniquePlayerName() -> String {
         print("Enter player name : ")
         print("")

@@ -11,13 +11,13 @@ import Foundation
 /// Game Class
 final class Game {
     
-    // MARK: - Proprieties
+    // MARK: - Properties
     
-    // declaration of instance PlayerFactory
+    /// Instance PlayerFactory
     private let playerFactory = PlayerFactory()
-    // declare of array Player to append players
+    ///  Array Player to append players
     private var players = [Player]()
-    // Keep in memory all turns
+    /// Keep in memory all turns
     private var numberOfTurns = 1
     
     // MARK: - Methods
@@ -56,7 +56,7 @@ final class Game {
         if let line = readLine() {
             switch line {
             case "1": // we switch to the creation of fighters
-                // call of the method createPlayers
+                // Method of createPlayers from PlayerFactory instance
                 playerFactory.createPlayers()
                 // adjust for the players to the players in playerFactory class
                 players = playerFactory.players
@@ -75,7 +75,7 @@ final class Game {
     /// fight continue until there is a loser
     private func fight() {
         while true {
-            // for loop to take a player at index 0 and play his turn
+            // Loop to take a player at index 0 and play his turn
             for i in 0..<2 {
                 print("")
                 print(players[i].name + " choose your character")
@@ -119,7 +119,7 @@ final class Game {
         character.attack(myTarget) // attack
     }
     
-    /// function to ask choice to user every time needed
+    /// Ask choice to user every time needed
     private func userChoice() -> Int {
         var userChoice = 0
         repeat {
@@ -132,25 +132,31 @@ final class Game {
         return userChoice
     }
     
-    /// function contain a bonus
+    /// Contain a bonus
     private func misteryBox(_ character: Character) {
         let randomNumber = Int.random(in: 1...99)
         if character.lifePoints >= 1, randomNumber <= 40 {
             print("The magic chest just appear ")
             if character is Magus {
-                print("Congratulation ! You found the AngelStick with 70 of healing let's use this right now ")
-                print("")
+                print("""
+                    Congratulation ! You found the AngelStick with 70 of healing let's use this right now
+
+""")
+                
                 let newWeapon = AngelStick()
                 character.weapon = newWeapon
             } else {
-                print("Congratulation! You found the Cross Bow with 70 of dammage so powerfull ")
-                print("")
+                print("""
+                        Congratulation! You found the Cross Bow with 70 of dammage so powerfull
+
+""")
+                
                 let newWeapon = CrossBow()
                 character.weapon = newWeapon
             }
         }
     }
-    
+    /// Show statistics
     private func endGame() {
         for player in players {
             print("player : " + player.name)

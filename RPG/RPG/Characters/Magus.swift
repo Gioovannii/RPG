@@ -13,7 +13,7 @@ final class Magus: Character {
         super.init(name: name, type: .Magus, lifePoints: 6, maxLife: 80, weapon: MagusStick())
     }
     
-    /// Description change for the magus
+    /// Change description for the magus
     override func description(index: Int) -> String {
         // If is dead nothing change
         if self.isDead {

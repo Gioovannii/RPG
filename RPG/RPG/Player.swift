@@ -11,11 +11,11 @@ import Foundation
 /// Define each of our player
 final class Player {
     
-    // MARK: - Proprieties
+    // MARK: - Properties
     
     let name: String
     var characters = [Character]()
-    // calculate propriety to check dead Characters
+    /// calculate property to check dead Characters
     var isLoser: Bool {
         var isLoser = false
         for character in characters {
@@ -23,8 +23,6 @@ final class Player {
                 isLoser = true
             } else { return false }
         }
-        print("")
-        print("")
         return isLoser
     }
     
@@ -34,7 +32,7 @@ final class Player {
         self.name = name
     }
     
-    //func for display your player for the fight
+    /// Display your player for the fight
     public func descriptionCharacters() {
         // Start the loop in the charactersTeams using (key, value)
         for (index, character) in characters.enumerated() {

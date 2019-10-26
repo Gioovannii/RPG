@@ -14,17 +14,12 @@ enum CharacterType: String {
 
 class Character {
     
-    // MARK: - Proprieties
+    // MARK: - Properties
     
-    // Name of our characters
     let name: String
-    // Type via enumeration
     let type: CharacterType
-    // Weapons using Weapon class
     var weapon: Weapon
-    // Maximum Life
     let maxLife: Int
-    // Life of our Characters
     var lifePoints: Int {
         // Observer before any action is finish
         willSet {
@@ -43,12 +38,12 @@ class Character {
             } else if oldValue < lifePoints && oldValue > 0 {
                 print("\(self.name) gain \(lifePoints - oldValue) of life points")
             } else {
-                print("You're dead on the battle 💩 ")
+                print("You're dead on the battle 💩")
             }
         }
     }
     
-    // Character is still alive
+    /// Checking life in calculate property
     var isDead: Bool {
         return lifePoints <= 0
     }
@@ -68,7 +63,7 @@ class Character {
         if isDead {
             return("☠️ \(name) the \(type) \(lifePoints)/\(maxLife) had die during the fight. ☠️")
         } else {
-            return("\(index). \(name) the \(type) \(lifePoints)/\(maxLife) life points /  \(weapon.weaponName) : \(weapon.damage) dammage ")
+            return("\(index). \(name) the \(type) \(lifePoints)/\(maxLife) life points /  \(weapon.weaponName) : \(weapon.damage) dammage")
         }
     }
     
